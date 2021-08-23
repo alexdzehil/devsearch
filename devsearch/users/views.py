@@ -7,7 +7,7 @@ from django.db.models import Q
 
 from .forms import CustomUserCreationForm, ProfileForm, SkillForm
 from .models import Profile, Skill
-from .utils import search_profiles
+from .utils import search_profiles, paginator_profiles
 
 
 def login_page(request):
@@ -64,7 +64,9 @@ def register_user(request):
 
 def profiles(request):
     profiles, search_query = search_profiles(request)
-    context = {'profiles': profiles, 'search_query': search_query}
+    custom_range, profiles = paginator_profiles(request, profiles, 3)
+
+    context = {'profiles': profiles, 'search_query': search_query, 'cestom_range': custom_range}
     return render(request, 'users/profiles.html', context)
 
 
