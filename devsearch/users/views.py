@@ -49,6 +49,7 @@ def register_user(request):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
+            user.username = user.username
             user.save()
 
             messages.success(request, 'User account was created!')
@@ -56,7 +57,7 @@ def register_user(request):
             login(request, user)
             return redirect('edit-account')
         else:
-            messages.success(request, 'An error has occurred during registration')
+            messages.error(request, 'An error has occurred during registration')
 
     context = {'page': page, 'form': form}
     return render(request, 'users/login_register.html', context)
@@ -64,7 +65,7 @@ def register_user(request):
 
 def profiles(request):
     profiles, search_query = search_profiles(request)
-    custom_range, profiles = paginator_profiles(request, profiles, 6)
+    custom_range, profiles = paginator_profiles(request, profiles, 9)
 
     context = {'profiles': profiles, 'search_query': search_query, 'cestom_range': custom_range}
     return render(request, 'users/profiles.html', context)

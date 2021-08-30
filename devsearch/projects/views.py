@@ -29,7 +29,7 @@ def project(request, pk):
 
         project.get_vote_count
 
-        messages.success(request, 'Your rewiev was successfully submitted!')
+        messages.success(request, 'Your review was successfully submitted!')
         return redirect('project', pk=project.id)
 
     context = {'project': project, 'form': form}
