@@ -141,13 +141,9 @@ WSGI_APPLICATION = 'devsearch.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dfok9jegcd33i7',
         'USER': env('USER'),
-        'USER': 'mjgxouscnrygdo',
         'PASSWORD': env('PASSWORD'),
-        'PASSWORD': '96eddef6b48cbd0b1fd74b87ed4fe3e0db0b66df0627a27b58fee857d973694c',
         'HOST': env('HOST'),
-        'HOST': 'ec2-54-155-92-75.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
