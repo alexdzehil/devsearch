@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/alexdzehil/devsearch.svg?branch=main)](https://travis-ci.com/alexdzehil/devsearch)
+[![Build Status](https://app.travis-ci.com/alexdzehil/devsearch.svg?branch=main)](https://app.travis-ci.com/alexdzehil/devsearch)
 # DevSearch
 ## Deployment
 * Digitalocean
