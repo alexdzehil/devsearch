@@ -18,4 +18,4 @@
 * Search projects and developers
 
 ## Starting page
-[](devsearch/static/images/Devsearch Home.jpg)
+![alt text](devsearch/static/images/Devsearch Home.jpg "devsearch")
