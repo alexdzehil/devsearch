@@ -16,3 +16,6 @@
 * Messages
 * Rate and votes other work
 * Search projects and developers
+
+## Starting page
+![alt text](devsearch/static/images/Devsearch Home.jpg "devsearch")
